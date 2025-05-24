@@ -3,29 +3,29 @@
 ## Overview
 This project implements a data pipeline and machine learning model for predictive maintenance. It leverages a medallion architecture with Delta Lake for data storage, PySpark for data processing, MLflow for model tracking and experimentation, and FastAPI for serving the trained model via a REST API.
 
-## Summary Project
+## Project Structure
+The repository is organized as follows:
 
-predictive_maintenance_project contains
-├── 📄 Documentation/
-│   ├── 📄 Architecture_Diagram.pdf       # Part 1: System design diagrams
-│   ├── 📄 Data_Modeling_Document.pdf     # Part 1: Silver/Gold layer models
+predictive_maintenance_project/
+├── 📁 Documentation/
+│ ├── 📄 Architecture_Diagram.pdf # System design diagrams
+│ ├── 📄 Data_Modeling_Document.pdf # Silver and Gold layer data models
+├── 📁 Code/
+│ ├── 📄 api.py # FastAPI implementation for model serving
+│ ├── 📄 Predictive_Maintenance_Pipeline.py # PySpark data pipeline
+│ ├── 📄 requirements.txt # Project dependencies
+├── 📄 README.md # Setup and usage instructions
 
-├── 💻 Code/
-│   ├── 📄 api.py                             # FastAPI implementation (Part 2)
-│   ├── 📄 Predictive_Maintenance_Pipeline.py # Spark pipeline (Part 2)
-│   └── 📄 requirements.txt                   # Dependencies
-│
-├── 📄 README.md                          # Setup/usage instructions
 
 ## Features
-- **Data Processing**: Uses PySpark for scalable data processing and transformation.
-- **Medallion Architecture**: Organizes data into bronze, silver, and gold layers using Delta Lake.
-- **Model Tracking**: Tracks experiments and models with MLflow.
-- **Model Serving**: Deploys the trained model as a REST API using FastAPI.
+- **Data Processing**: Utilizes PySpark for scalable data processing and transformation
+- **Medallion Architecture**: Organizes data into Bronze, Silver, and Gold layers using Delta Lake
+- **Model Tracking**: Tracks experiments and models using MLflow
+- **Model Serving**: Deploys the trained model as a REST API using FastAPI
 
 ## Dataset
 The dataset used in this project is sourced from Kaggle:  
-[Machine Predictive Maintenance Classification](https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification)
+[Machine Predictive Maintenance Classification](https://www.kaggle.com/datasets/datasets)
 
 ## Setup
 
@@ -37,6 +37,12 @@ The dataset used in this project is sourced from Kaggle:
 
 ### Installation
 1. Clone the repository:
-   ```bash
-   git clone git@github.com:hammadyasir/Assigment-predictive_maintenance.git
-   cd <your-repo-name>
+```bash
+git clone git@github.com:hammadyasir/Assignment-predictive_maintenance.git
+cd Assignment-predictive_maintenance
+
+2. Install dependencies:
+pip install -r Code/requirements.txt
+
+### Contributing
+Contributions are welcome! Please submit a pull request or open an issue to discuss improvements or bug fixes.
